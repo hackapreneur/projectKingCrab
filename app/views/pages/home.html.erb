@@ -1,0 +1,11 @@
+
+<div class="hero-unit">
+  <h1>Appventory</h1>
+  <p>Fast Mobile App Inventory</p>
+  <p>
+  	<% unless user_signed_in? %>
+    <%= link_to "Sign Up Now!", new_user_registration_path , class:"btn btn-primary btn-large" %>
+    	<% end %>
+    </a>
+  </p>
+</div>

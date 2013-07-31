@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Image:</b>
+  <%= image_tag @product.image(:medium) %>
+</p>
+<p>
+  <b>Model Year:</b>
+  <%= @product.ModelYear %>
+</p>
+<p>
+  <b>Make:</b>
+  <%= @product.Make %>
+</p>
+<p>
+  <b>Model:</b>
+  <%= @product.Model %>
+</p>
+<p>
+  <b>Description:</b>
+  <%= @product.description %>
+</p>
+<p>
+  <b>By:</b>
+  <%= @product.user.email %>
+</p>
+
+<% if current_user == @product.user %>
+	<%= link_to 'Edit', edit_product_path(@product) %> |
+	<%= link_to 'Back', products_path %>
+<% end %>
